@@ -19,12 +19,12 @@ class VcChoice: UIViewController {
     
     @IBOutlet weak var scoreScreen: UITextField!
     @IBOutlet weak var textDescription: UITextField!
-    
+    @IBOutlet weak var masterScoreStack: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setText()
-
+        KwPack.CustomYatzy().formatScoreButtonsInStack(self.masterScoreStack)
         
        
         // Do any additional setup after loading the view.

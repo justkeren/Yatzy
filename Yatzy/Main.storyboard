@@ -769,6 +769,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="masterScoreStack" destination="Qel-44-1TO" id="tIQ-iH-LqD"/>
                         <outlet property="scoreScreen" destination="5GM-OA-YZB" id="34c-js-WuY"/>
                         <outlet property="textDescription" destination="5GM-OA-YZB" id="7B9-3J-7wH"/>
                     </connections>
