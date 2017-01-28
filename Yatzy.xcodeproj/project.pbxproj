@@ -6,22 +6,8 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		EAAE28221E3CF16F0031B982 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAE28211E3CF16F0031B982 /* AppDelegate.swift */; };
-		EAAE28241E3CF16F0031B982 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAE28231E3CF16F0031B982 /* ViewController.swift */; };
-		EAAE28271E3CF16F0031B982 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAAE28251E3CF16F0031B982 /* Main.storyboard */; };
-		EAAE28291E3CF16F0031B982 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAAE28281E3CF16F0031B982 /* Assets.xcassets */; };
-		EAAE282C1E3CF16F0031B982 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAAE282A1E3CF16F0031B982 /* LaunchScreen.storyboard */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
 		EAAE281E1E3CF16F0031B982 /* Yatzy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yatzy.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EAAE28211E3CF16F0031B982 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EAAE28231E3CF16F0031B982 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EAAE28261E3CF16F0031B982 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EAAE28281E3CF16F0031B982 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EAAE282B1E3CF16F0031B982 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		EAAE282D1E3CF16F0031B982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +40,6 @@
 		EAAE28201E3CF16F0031B982 /* Yatzy */ = {
 			isa = PBXGroup;
 			children = (
-				EAAE28211E3CF16F0031B982 /* AppDelegate.swift */,
-				EAAE28231E3CF16F0031B982 /* ViewController.swift */,
-				EAAE28251E3CF16F0031B982 /* Main.storyboard */,
-				EAAE28281E3CF16F0031B982 /* Assets.xcassets */,
-				EAAE282A1E3CF16F0031B982 /* LaunchScreen.storyboard */,
-				EAAE282D1E3CF16F0031B982 /* Info.plist */,
 			);
 			path = Yatzy;
 			sourceTree = "<group>";
@@ -124,9 +104,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAAE282C1E3CF16F0031B982 /* LaunchScreen.storyboard in Resources */,
-				EAAE28291E3CF16F0031B982 /* Assets.xcassets in Resources */,
-				EAAE28271E3CF16F0031B982 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,31 +114,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAAE28241E3CF16F0031B982 /* ViewController.swift in Sources */,
-				EAAE28221E3CF16F0031B982 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		EAAE28251E3CF16F0031B982 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EAAE28261E3CF16F0031B982 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		EAAE282A1E3CF16F0031B982 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EAAE282B1E3CF16F0031B982 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		EAAE282E1E3CF16F0031B982 /* Debug */ = {
@@ -263,6 +219,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AFLGF4NJ57;
 				INFOPLIST_FILE = Yatzy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kerenweinstein.Yatzy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -276,6 +233,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AFLGF4NJ57;
 				INFOPLIST_FILE = Yatzy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kerenweinstein.Yatzy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
