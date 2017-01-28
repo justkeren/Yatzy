@@ -260,6 +260,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="scoreCardStackView" destination="DwR-ji-fep" id="bPh-EZ-Hph"/>
                         <outlet property="textDescription" destination="byn-hC-Z4D" id="rvk-WA-BR6"/>
                     </connections>
                 </viewController>
