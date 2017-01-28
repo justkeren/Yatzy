@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Yatzy
 //
-//  Created by Keren Weinstein on 1/28/17.
+//  Created by Keren Weinstein on 1/8/17.
 //  Copyright © 2017 Keren Weinstein. All rights reserved.
 //
 

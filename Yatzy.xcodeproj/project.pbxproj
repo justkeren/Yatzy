@@ -6,8 +6,57 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		EA9714031E3CF32A0049719D /* Framework in Resources */ = {isa = PBXBuildFile; fileRef = EA9714021E3CF32A0049719D /* Framework */; };
+		EA9714131E3CF33E0049719D /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = EA9714041E3CF33E0049719D /* Base.lproj */; };
+		EA9714141E3CF33E0049719D /* KwPack in Resources */ = {isa = PBXBuildFile; fileRef = EA9714051E3CF33E0049719D /* KwPack */; };
+		EA9714151E3CF33E0049719D /* VcChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9714061E3CF33E0049719D /* VcChoice.swift */; };
+		EA9714161E3CF33E0049719D /* VcUpper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9714071E3CF33E0049719D /* VcUpper.swift */; };
+		EA9714171E3CF33E0049719D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA9714081E3CF33E0049719D /* Main.storyboard */; };
+		EA9714181E3CF33E0049719D /* VcStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9714091E3CF33E0049719D /* VcStart.swift */; };
+		EA9714191E3CF33E0049719D /* Primary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA97140A1E3CF33E0049719D /* Primary.storyboard */; };
+		EA97141A1E3CF33E0049719D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA97140B1E3CF33E0049719D /* Assets.xcassets */; };
+		EA97141B1E3CF33E0049719D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA97140C1E3CF33E0049719D /* Info.plist */; };
+		EA97141C1E3CF33E0049719D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA97140D1E3CF33E0049719D /* User.swift */; };
+		EA97141D1E3CF33E0049719D /* VcDice.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA97140E1E3CF33E0049719D /* VcDice.swift */; };
+		EA97141E1E3CF33E0049719D /* VcImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA97140F1E3CF33E0049719D /* VcImages.swift */; };
+		EA97141F1E3CF33E0049719D /* VcPrimary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9714101E3CF33E0049719D /* VcPrimary.swift */; };
+		EA9714201E3CF33E0049719D /* VcSingleChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9714111E3CF33E0049719D /* VcSingleChoice.swift */; };
+		EA9714211E3CF33E0049719D /* VcTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9714121E3CF33E0049719D /* VcTest.swift */; };
+		EA9714341E3CF4280049719D /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9714311E3CF4280049719D /* Buttons.swift */; };
+		EA9714351E3CF4280049719D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9714321E3CF4280049719D /* Colors.swift */; };
+		EA9714361E3CF4280049719D /* KwPack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9714331E3CF4280049719D /* KwPack.swift */; };
+		EA97143B1E3CF4520049719D /* CustomYatzy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9714381E3CF4520049719D /* CustomYatzy.swift */; };
+		EA97143C1E3CF4520049719D /* PermStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9714391E3CF4520049719D /* PermStore.swift */; };
+		EA97143D1E3CF4520049719D /* TagConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA97143A1E3CF4520049719D /* TagConvert.swift */; };
+		EAF48F901E3CF50F0018EC38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF48F8F1E3CF50F0018EC38 /* AppDelegate.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		EA9714021E3CF32A0049719D /* Framework */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Framework; sourceTree = "<group>"; };
+		EA9714041E3CF33E0049719D /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
+		EA9714051E3CF33E0049719D /* KwPack */ = {isa = PBXFileReference; lastKnownFileType = folder; path = KwPack; sourceTree = "<group>"; };
+		EA9714061E3CF33E0049719D /* VcChoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VcChoice.swift; sourceTree = "<group>"; };
+		EA9714071E3CF33E0049719D /* VcUpper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VcUpper.swift; sourceTree = "<group>"; };
+		EA9714081E3CF33E0049719D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		EA9714091E3CF33E0049719D /* VcStart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VcStart.swift; sourceTree = "<group>"; };
+		EA97140A1E3CF33E0049719D /* Primary.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Primary.storyboard; sourceTree = "<group>"; };
+		EA97140B1E3CF33E0049719D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EA97140C1E3CF33E0049719D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA97140D1E3CF33E0049719D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EA97140E1E3CF33E0049719D /* VcDice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VcDice.swift; sourceTree = "<group>"; };
+		EA97140F1E3CF33E0049719D /* VcImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VcImages.swift; sourceTree = "<group>"; };
+		EA9714101E3CF33E0049719D /* VcPrimary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VcPrimary.swift; sourceTree = "<group>"; };
+		EA9714111E3CF33E0049719D /* VcSingleChoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VcSingleChoice.swift; sourceTree = "<group>"; };
+		EA9714121E3CF33E0049719D /* VcTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VcTest.swift; sourceTree = "<group>"; };
+		EA9714311E3CF4280049719D /* Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Buttons.swift; path = Framework/Buttons.swift; sourceTree = "<group>"; };
+		EA9714321E3CF4280049719D /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = Framework/Colors.swift; sourceTree = "<group>"; };
+		EA9714331E3CF4280049719D /* KwPack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KwPack.swift; path = Framework/KwPack.swift; sourceTree = "<group>"; };
+		EA9714381E3CF4520049719D /* CustomYatzy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomYatzy.swift; path = KwPack/CustomYatzy.swift; sourceTree = "<group>"; };
+		EA9714391E3CF4520049719D /* PermStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PermStore.swift; path = KwPack/PermStore.swift; sourceTree = "<group>"; };
+		EA97143A1E3CF4520049719D /* TagConvert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TagConvert.swift; path = KwPack/TagConvert.swift; sourceTree = "<group>"; };
 		EAAE281E1E3CF16F0031B982 /* Yatzy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yatzy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAF48F8F1E3CF50F0018EC38 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +70,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA9714371E3CF4350049719D /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				EA9714311E3CF4280049719D /* Buttons.swift */,
+				EA9714321E3CF4280049719D /* Colors.swift */,
+				EA9714331E3CF4280049719D /* KwPack.swift */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		EA97143E1E3CF45A0049719D /* Utillities */ = {
+			isa = PBXGroup;
+			children = (
+				EA9714381E3CF4520049719D /* CustomYatzy.swift */,
+				EA9714391E3CF4520049719D /* PermStore.swift */,
+				EA97143A1E3CF4520049719D /* TagConvert.swift */,
+			);
+			name = Utillities;
+			sourceTree = "<group>";
+		};
 		EAAE28151E3CF16F0031B982 = {
 			isa = PBXGroup;
 			children = (
@@ -40,6 +109,25 @@
 		EAAE28201E3CF16F0031B982 /* Yatzy */ = {
 			isa = PBXGroup;
 			children = (
+				EA9714041E3CF33E0049719D /* Base.lproj */,
+				EA9714051E3CF33E0049719D /* KwPack */,
+				EA9714021E3CF32A0049719D /* Framework */,
+				EA9714371E3CF4350049719D /* Framework */,
+				EA97143E1E3CF45A0049719D /* Utillities */,
+				EA97140B1E3CF33E0049719D /* Assets.xcassets */,
+				EA9714081E3CF33E0049719D /* Main.storyboard */,
+				EA97140A1E3CF33E0049719D /* Primary.storyboard */,
+				EA97140C1E3CF33E0049719D /* Info.plist */,
+				EA97140D1E3CF33E0049719D /* User.swift */,
+				EA97140E1E3CF33E0049719D /* VcDice.swift */,
+				EA9714091E3CF33E0049719D /* VcStart.swift */,
+				EA9714071E3CF33E0049719D /* VcUpper.swift */,
+				EA9714061E3CF33E0049719D /* VcChoice.swift */,
+				EA97140F1E3CF33E0049719D /* VcImages.swift */,
+				EA9714101E3CF33E0049719D /* VcPrimary.swift */,
+				EA9714121E3CF33E0049719D /* VcTest.swift */,
+				EA9714111E3CF33E0049719D /* VcSingleChoice.swift */,
+				EAF48F8F1E3CF50F0018EC38 /* AppDelegate.swift */,
 			);
 			path = Yatzy;
 			sourceTree = "<group>";
@@ -77,6 +165,7 @@
 					EAAE281D1E3CF16F0031B982 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = AFLGF4NJ57;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -104,6 +193,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA9714191E3CF33E0049719D /* Primary.storyboard in Resources */,
+				EA9714141E3CF33E0049719D /* KwPack in Resources */,
+				EA9714131E3CF33E0049719D /* Base.lproj in Resources */,
+				EA9714031E3CF32A0049719D /* Framework in Resources */,
+				EA97141A1E3CF33E0049719D /* Assets.xcassets in Resources */,
+				EA9714171E3CF33E0049719D /* Main.storyboard in Resources */,
+				EA97141B1E3CF33E0049719D /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +210,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA97143D1E3CF4520049719D /* TagConvert.swift in Sources */,
+				EA97141C1E3CF33E0049719D /* User.swift in Sources */,
+				EA9714351E3CF4280049719D /* Colors.swift in Sources */,
+				EA97141D1E3CF33E0049719D /* VcDice.swift in Sources */,
+				EA97143B1E3CF4520049719D /* CustomYatzy.swift in Sources */,
+				EA97141E1E3CF33E0049719D /* VcImages.swift in Sources */,
+				EA9714361E3CF4280049719D /* KwPack.swift in Sources */,
+				EA9714211E3CF33E0049719D /* VcTest.swift in Sources */,
+				EAF48F901E3CF50F0018EC38 /* AppDelegate.swift in Sources */,
+				EA97141F1E3CF33E0049719D /* VcPrimary.swift in Sources */,
+				EA9714341E3CF4280049719D /* Buttons.swift in Sources */,
+				EA97143C1E3CF4520049719D /* PermStore.swift in Sources */,
+				EA9714181E3CF33E0049719D /* VcStart.swift in Sources */,
+				EA9714201E3CF33E0049719D /* VcSingleChoice.swift in Sources */,
+				EA9714151E3CF33E0049719D /* VcChoice.swift in Sources */,
+				EA9714161E3CF33E0049719D /* VcUpper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,12 +329,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = AFLGF4NJ57;
 				INFOPLIST_FILE = Yatzy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kerenweinstein.Yatzy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -231,6 +345,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = AFLGF4NJ57;
 				INFOPLIST_FILE = Yatzy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -260,6 +375,7 @@
 				EAAE28321E3CF16F0031B982 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
