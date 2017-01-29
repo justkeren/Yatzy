@@ -24,7 +24,7 @@ class VcChoice: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setText()
-        KwPack.CustomYatzy().formatScoreButtonsInStack(self.masterScoreStack)
+       // KwPack.CustomYatzy().formatScoreButtonsInStack(self.masterScoreStack)
         
        
         // Do any additional setup after loading the view.
