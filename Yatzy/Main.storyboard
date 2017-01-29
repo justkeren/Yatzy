@@ -124,90 +124,112 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="DwR-ji-fep">
-                                <rect key="frame" x="274.5" y="269" width="475" height="230"/>
+                                <rect key="frame" x="232" y="269" width="560" height="230"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Tap what you got" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="byn-hC-Z4D" userLabel="How Many Did You Get?">
-                                        <rect key="frame" x="131.5" y="0.0" width="212" height="50"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="byn-hC-Z4D" userLabel="How Many Did You Get?">
+                                        <rect key="frame" x="274.5" y="0.0" width="11" height="50"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="gCI-CW-Yll">
-                                        <rect key="frame" x="0.0" y="90" width="475" height="50"/>
+                                        <rect key="frame" x="0.0" y="90" width="560" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ai-fl-rgm" userLabel="ones">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCV-Fi-95l" userLabel="x">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="5ac-m9-NpG"/>
+                                                    <constraint firstAttribute="width" constant="50" id="jfM-ua-WBS"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
+                                                <size key="titleShadowOffset" width="5" height="5"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="setScore:" destination="BbB-1d-iE1" eventType="touchUpInside" id="CHw-UL-qsj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ai-fl-rgm" userLabel="ones">
+                                                <rect key="frame" x="85" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="Bm0-Xb-2CG"/>
                                                 </constraints>
-                                                <state key="normal" image="dice1">
-                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="setScore:" destination="BbB-1d-iE1" eventType="touchUpInside" id="6uB-i0-aVE"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eE0-Dt-Ffd" userLabel="twos">
-                                                <rect key="frame" x="85" y="0.0" width="50" height="50"/>
-                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <rect key="frame" x="170" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.40000000000000002" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="MSF-bR-gcm"/>
                                                 </constraints>
-                                                <state key="normal" image="dice2new">
-                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="setScore:" destination="BbB-1d-iE1" eventType="touchUpInside" id="CzH-bp-5aP"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVr-pB-Nkg" userLabel="threes">
-                                                <rect key="frame" x="170" y="0.0" width="50" height="50"/>
-                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <rect key="frame" x="255" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.40000000000000002" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="spl-FC-V3k"/>
                                                 </constraints>
-                                                <state key="normal" image="dice3new">
-                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="setScore:" destination="BbB-1d-iE1" eventType="touchUpInside" id="sUD-KF-875"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJS-bJ-O0e" userLabel="fours">
-                                                <rect key="frame" x="255" y="0.0" width="50" height="50"/>
-                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <rect key="frame" x="340" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.40000000000000002" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="Llh-AW-XEd"/>
                                                 </constraints>
-                                                <state key="normal" image="dice4new">
-                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="setScore:" destination="BbB-1d-iE1" eventType="touchUpInside" id="Eby-eS-5ta"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clf-eF-ZGp" userLabel="fives">
-                                                <rect key="frame" x="340" y="0.0" width="50" height="50"/>
-                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <rect key="frame" x="425" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.40000000000000002" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="bo2-Jx-biT"/>
                                                 </constraints>
-                                                <state key="normal" image="dice5new">
-                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="setScore:" destination="BbB-1d-iE1" eventType="touchUpInside" id="GHK-er-hDo"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ll-2c-AGS" userLabel="sixes">
-                                                <rect key="frame" x="425" y="0.0" width="50" height="50"/>
-                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <rect key="frame" x="510" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.40000000000000002" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="RiH-kq-eR0"/>
                                                 </constraints>
-                                                <state key="normal" image="dice6new">
-                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="setScore:" destination="BbB-1d-iE1" eventType="touchUpInside" id="Q9B-9b-Os3"/>
@@ -216,32 +238,17 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="MET-Qz-a52">
-                                        <rect key="frame" x="120" y="180" width="235" height="50"/>
+                                        <rect key="frame" x="230" y="180" width="100" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCV-Fi-95l" userLabel="x">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
-                                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="100" id="03t-oo-Cvq"/>
-                                                    <constraint firstAttribute="height" constant="50" id="QtO-ns-qZ6"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                <state key="normal" title="Cancel">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="setScore:" destination="BbB-1d-iE1" eventType="touchUpInside" id="CHw-UL-qsj"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" tag="99" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRq-PH-JTV" userLabel="clear">
-                                                <rect key="frame" x="135" y="0.0" width="100" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
                                                 <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="6YG-dO-ccl"/>
                                                     <constraint firstAttribute="width" constant="100" id="gH5-ID-eqt"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                <state key="normal" title="Clear">
+                                                <state key="normal" title="Erase Score">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
@@ -382,24 +389,8 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bMM-Uh-pqR">
                                                 <rect key="frame" x="0.0" y="57" width="400" height="50"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdr-pe-Xz0" userLabel="count0">
-                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="50" id="HjO-Cp-Lko"/>
-                                                            <constraint firstAttribute="width" constant="50" id="Tu1-ik-4iE"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
-                                                        <size key="titleShadowOffset" width="3" height="0.0"/>
-                                                        <state key="normal" title="0">
-                                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="setScore:" destination="A4z-4A-fwe" eventType="touchUpInside" id="Ujw-hz-aab"/>
-                                                        </connections>
-                                                    </button>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hs1-G5-iX7" userLabel="count1">
-                                                        <rect key="frame" x="70" y="0.0" width="50" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                         <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="TcA-Zb-REm"/>
@@ -414,7 +405,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewg-MM-f1V" userLabel="count2">
-                                                        <rect key="frame" x="140" y="0.0" width="50" height="50"/>
+                                                        <rect key="frame" x="70" y="0.0" width="50" height="50"/>
                                                         <color key="backgroundColor" red="0.50588235290000005" green="0.86666666670000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="50" id="KKg-qq-y3Z"/>
@@ -429,7 +420,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHD-y6-fTu" userLabel="count3">
-                                                        <rect key="frame" x="210" y="0.0" width="50" height="50"/>
+                                                        <rect key="frame" x="140" y="0.0" width="50" height="50"/>
                                                         <color key="backgroundColor" red="0.50588235290000005" green="0.86666666670000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="50" id="sCH-U8-OsC"/>
@@ -444,7 +435,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cme-dX-ujY" userLabel="count4">
-                                                        <rect key="frame" x="280" y="0.0" width="50" height="50"/>
+                                                        <rect key="frame" x="210" y="0.0" width="50" height="50"/>
                                                         <color key="backgroundColor" red="0.50588235290000005" green="0.86666666670000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="WHC-b3-1eF"/>
@@ -459,7 +450,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2r1-Yq-zpd" userLabel="count5">
-                                                        <rect key="frame" x="350" y="0.0" width="50" height="50"/>
+                                                        <rect key="frame" x="280" y="0.0" width="50" height="50"/>
                                                         <color key="backgroundColor" red="0.50588235290000005" green="0.86666666670000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="50" id="eEF-Hl-UfY"/>
@@ -473,16 +464,32 @@
                                                             <action selector="setScore:" destination="A4z-4A-fwe" eventType="touchUpInside" id="TCM-8b-FJJ"/>
                                                         </connections>
                                                     </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdr-pe-Xz0" userLabel="count0">
+                                                        <rect key="frame" x="350" y="0.0" width="50" height="50"/>
+                                                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="HjO-Cp-Lko"/>
+                                                            <constraint firstAttribute="width" constant="50" id="Tu1-ik-4iE"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
+                                                        <size key="titleShadowOffset" width="3" height="0.0"/>
+                                                        <state key="normal" title="0">
+                                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="setScore:" destination="A4z-4A-fwe" eventType="touchUpInside" id="Ujw-hz-aab"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Dse-13-aem">
-                                                <rect key="frame" x="99" y="137" width="202" height="45"/>
+                                                <rect key="frame" x="98" y="137" width="204" height="45"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="99" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7dF-nQ-EZe" userLabel="clear">
-                                                        <rect key="frame" x="0.0" y="0.0" width="82" height="45"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="84" height="45"/>
                                                         <color key="backgroundColor" red="0.50588235290000005" green="0.86666666670000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                                        <state key="normal" title="Clear Score">
+                                                        <state key="normal" title="Erase Score">
                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
@@ -490,7 +497,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="99" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M2D-yQ-TMg" userLabel="goBack">
-                                                        <rect key="frame" x="112" y="0.0" width="90" height="45"/>
+                                                        <rect key="frame" x="114" y="0.0" width="90" height="45"/>
                                                         <color key="backgroundColor" red="0.50588235290000005" green="0.86666666670000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="TFV-mc-91m"/>
@@ -699,15 +706,15 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="pCS-Ha-NNB">
                                         <rect key="frame" x="0.0" y="360" width="200" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" tag="99" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IE4-v3-yfS" userLabel="clear">
+                                            <button opaque="NO" tag="99" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="IE4-v3-yfS" userLabel="clear">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="Jf6-Xw-G1I"/>
                                                     <constraint firstAttribute="width" constant="50" id="KXo-en-tPm"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                                <state key="normal" title="Cancel">
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <state key="normal" title="Erase Score">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
@@ -753,7 +760,7 @@
                                             <constraint firstAttribute="width" constant="100" id="nss-EV-HTv"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                        <state key="normal" title="Done">
+                                        <state key="normal" title="Enter">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -780,12 +787,4 @@
             <point key="canvasLocation" x="817.96875" y="631.25"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="dice1" width="63" height="50"/>
-        <image name="dice2new" width="63" height="50"/>
-        <image name="dice3new" width="63" height="50"/>
-        <image name="dice4new" width="63" height="50"/>
-        <image name="dice5new" width="63" height="50"/>
-        <image name="dice6new" width="63" height="50"/>
-    </resources>
 </document>

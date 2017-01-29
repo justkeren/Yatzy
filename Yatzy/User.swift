@@ -21,6 +21,11 @@ extension KwPack {
     
         var lastScoreInput: UIButton!;
         var playerButtons = Array<UIButton>();
+        var upperScoreButton: UIButton!;
+        var lowerScoreButton: UIButton!;
+        var bonusScoreButton: UIButton!;
+        var playerNameButton: UIButton!;
+        
 //since we dont have the stackview until after the player object is created, this is how you create an empty variable that is waiting for a stack object
         var playerStack: UIStackView!
         var playerName: String!
@@ -56,16 +61,7 @@ extension KwPack {
         }
         func setName(_ text: String) {
             self.playerName = text
-            var rowId   = 0;
-            for aButton in self.getButtons() {
-                
-                rowId = KwPack.TagConvert().getRowIdFromButton(aButton);
-                if (rowId == 18) {
-                    //this is the player name being set in the button title
-                    aButton.setTitle(text, for: UIControlState.normal);
-                    break;
-                }
-            }
+            self.playerNameButton.setTitle(text, for: UIControlState.normal)
         }
         //return the name to whoever is asking. you dont need anything in the paranthesis because you already have all the info necessary to return the name.
         func getName() -> String {
@@ -78,7 +74,23 @@ extension KwPack {
             return self.playerStack;
         }
         func setButton(_ aButton: UIButton) {
-            self.playerButtons.append(aButton);
+            let rowId = KwPack.TagConvert().getRowIdFromButton(aButton);
+            
+            if (rowId == 7){
+              self.upperScoreButton = aButton
+            
+            } else if (rowId == 6){
+                self.bonusScoreButton = aButton
+                
+            } else if (rowId == 17) {
+                self.lowerScoreButton = aButton
+           
+            } else if (rowId == 18 ) {
+                self.playerNameButton = aButton
+            } else {
+                self.playerButtons.append(aButton);
+            }
+            
         }
         func getButtons() -> Array<UIButton> {
             return self.playerButtons;
@@ -95,16 +107,8 @@ extension KwPack {
         }
         func updateUpperScore() -> Void {
             
-            var rowId   = 0;
-            for aButton in self.getButtons() {
-                
-                rowId = KwPack.TagConvert().getRowIdFromButton(aButton);
-                if (rowId == 7) {
-                    //this is the upper total
-                    aButton.setTitle(String(self.getUpperScore()), for: UIControlState.normal);
-                    break;
-                }
-            }
+             self.upperScoreButton.setTitle(String(self.getUpperScore()), for: UIControlState.normal);
+            
         }
         func getBonusScore() -> Int {
             let upperTotal  = self.getUpperScore();
@@ -118,20 +122,15 @@ extension KwPack {
         }
         func updateBonusScore() -> Void {
             
-            var rowId   = 0;
-            for aButton in self.getButtons() {
-                rowId = KwPack.TagConvert().getRowIdFromButton(aButton);
-                if (rowId == 6) {
-                    let bonusScore  = self.getBonusScore();
-                    if (bonusScore == 0) {
-                        aButton.setTitle("", for: UIControlState.normal);
-                    } else {
-                        aButton.setTitle(String(bonusScore), for: UIControlState.normal);
-                    }
-                    
-                    break;
-                }
+            let bonusScore  = self.getBonusScore();
+           
+            if (bonusScore == 0) {
+               self.bonusScoreButton.setTitle("", for: UIControlState.normal);
+            
+            } else {
+                self.bonusScoreButton.setTitle(String(bonusScore), for: UIControlState.normal);
             }
+     
         }
         
         func getLowerScore() -> Int {
@@ -142,16 +141,7 @@ extension KwPack {
         }
         func updateTotalScore() -> Void {
             
-            var rowId   = 0;
-            for aButton in self.getButtons() {
-               
-                rowId = KwPack.TagConvert().getRowIdFromButton(aButton);
-                if (rowId == 17) {
-                    //this is the total score
-                    aButton.setTitle(String(self.getTotalScore()), for: UIControlState.normal);
-                    break;
-                }
-            }
+            self.lowerScoreButton.setTitle(String(self.getTotalScore()), for: UIControlState.normal)
         }
 
         func updateScore(_ upDown: String,_ index: Int, _ score: Int, _ label: String) -> Void {

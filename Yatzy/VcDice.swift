@@ -50,7 +50,6 @@ class VcDice: UIViewController {
             let diceVal     = multiplier * aButtonObj.tag
             
             aButtonObj.setTitle(String(diceVal), for: UIControlState.normal);
-            aButtonObj.setImage(nil, for: UIControlState.normal)
           
         }
        
@@ -62,13 +61,13 @@ class VcDice: UIViewController {
         var text            = ""
         
         if (rowId == 8) {
-            text = "One Pair in?"
+            text = "Total Score for your Pair"
             
         } else if (rowId == 10) {
-            text = "Three of a kind in?"
+            text = "Total Score for Three of a Kind"
             
         } else if (rowId == 11) {
-            text = "Four of a kind in?"
+            text = "Total Score for Four of a Kind"
         }
         
         self.textDescription.text = text
