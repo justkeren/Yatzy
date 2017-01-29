@@ -21,6 +21,7 @@ class VcChoice: UIViewController {
     @IBOutlet weak var textDescription: UITextField!
     @IBOutlet weak var masterScoreStack: UIStackView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setText()
@@ -36,21 +37,34 @@ class VcChoice: UIViewController {
     }
     
     func setText () {
+        let playerName      = self.playerObj.getName() + ":";
         let lastButton      = self.playerObj.getLastButton();
         let rowId           = KwPack.TagConvert().getRowIdFromButton(lastButton);
         var text            = ""
         
         if (rowId == 9) {
-            text = "Score for Two Pair"
+            text = " Score for Two Pair"
             
         } else if (rowId == 15) {
-            text = "Score for Chance"
+            text = " Score for Chance"
             
         } else if (rowId == 12) {
-            text = "Score for Full House"
+            text = " Score for Full House"
         }
+        //object that holds the text content
+        let textObj         = NSMutableAttributedString(string:text)
+        let mainColor       = KwPack.CustomYatzy().getMainColor()
         
-        self.textDescription.text = text
+        let changeObj = [NSFontAttributeName : UIFont.boldSystemFont(ofSize: 24), NSForegroundColorAttributeName : mainColor];
+        
+       
+        let playerNameObj = NSMutableAttributedString(string:playerName, attributes: changeObj)
+        
+    
+        
+        playerNameObj.append(textObj)
+        
+        self.textDescription.attributedText = playerNameObj
         
     }
     

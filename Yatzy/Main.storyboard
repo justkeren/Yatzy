@@ -536,6 +536,7 @@
                     </view>
                     <connections>
                         <outlet property="scoreButtonStack" destination="bMM-Uh-pqR" id="kqa-1Q-S5n"/>
+                        <outlet property="scoreCardStackView" destination="G6b-VY-wub" id="CNb-Pa-JEt"/>
                         <outlet property="upperRowDesc" destination="lMW-x9-4J8" id="ZfQ-gO-hVv"/>
                     </connections>
                 </viewController>
@@ -556,16 +557,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Qel-44-1TO" userLabel="master stack">
-                                <rect key="frame" x="412" y="134" width="200" height="500"/>
+                                <rect key="frame" x="412" y="89" width="200" height="590"/>
                                 <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="K1z-Lb-yex" userLabel="ScoreCard Desc">
+                                        <rect key="frame" x="95" y="0.0" width="10" height="50"/>
+                                        <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="35" translatesAutoresizingMaskIntoConstraints="NO" id="5GM-OA-YZB" userLabel="How Many Did You Get?">
-                                        <rect key="frame" x="78.5" y="0.0" width="43" height="50"/>
+                                        <rect key="frame" x="78.5" y="90" width="43" height="50"/>
                                         <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Zp4-9b-JBR">
-                                        <rect key="frame" x="0.0" y="90" width="200" height="50"/>
+                                        <rect key="frame" x="0.0" y="180" width="200" height="50"/>
                                         <subviews>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6s-cU-fmy" userLabel="count1">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -607,7 +614,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="MuA-W6-LxM">
-                                        <rect key="frame" x="0.0" y="180" width="200" height="50"/>
+                                        <rect key="frame" x="0.0" y="270" width="200" height="50"/>
                                         <subviews>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rva-Ci-mRa" userLabel="count4">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -657,7 +664,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="VY7-m5-QVl">
-                                        <rect key="frame" x="0.0" y="270" width="200" height="50"/>
+                                        <rect key="frame" x="0.0" y="360" width="200" height="50"/>
                                         <subviews>
                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y44-l7-WYA" userLabel="count7">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -707,7 +714,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="pCS-Ha-NNB">
-                                        <rect key="frame" x="0.0" y="360" width="200" height="50"/>
+                                        <rect key="frame" x="0.0" y="450" width="200" height="50"/>
                                         <subviews>
                                             <button opaque="NO" tag="99" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="IE4-v3-yfS" userLabel="clear">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -757,7 +764,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pt8-mK-U4Z" userLabel="enter">
-                                        <rect key="frame" x="50" y="450" width="100" height="50"/>
+                                        <rect key="frame" x="50" y="540" width="100" height="50"/>
                                         <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="nss-EV-HTv"/>
@@ -782,10 +789,17 @@
                     <connections>
                         <outlet property="masterScoreStack" destination="Qel-44-1TO" id="tIQ-iH-LqD"/>
                         <outlet property="scoreScreen" destination="5GM-OA-YZB" id="34c-js-WuY"/>
-                        <outlet property="textDescription" destination="5GM-OA-YZB" id="7B9-3J-7wH"/>
+                        <outlet property="textDescription" destination="K1z-Lb-yex" id="OsL-Ce-Tr0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cei-aM-i9P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="35" id="vQK-uU-DiO" userLabel="How Many Did You Get?">
+                    <rect key="frame" x="0.0" y="0.0" width="43" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
             </objects>
             <point key="canvasLocation" x="817.96875" y="631.25"/>
         </scene>

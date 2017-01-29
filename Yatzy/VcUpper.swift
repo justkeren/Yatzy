@@ -14,13 +14,15 @@ class VcUpper: UIViewController {
     var playerObj: KwPack.User!
     @IBOutlet weak var upperRowDesc: UITextField!
     @IBOutlet weak var scoreButtonStack: UIStackView!
+    @IBOutlet weak var scoreCardStackView: UIStackView!
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //put this here because there is no action to set the text. This is the caller
         self.setText()
-        KwPack.CustomYatzy().formatScoreButtonsInStack(self.scoreButtonStack)
+        self.changeTextOnButton()
+       // KwPack.CustomYatzy().formatScoreButtonsInStack(self.scoreButtonStack)
         
         // Do any additional setup after loading the view.
     }
@@ -35,14 +37,43 @@ class VcUpper: UIViewController {
         print ("after IBaction")
         self.dismiss(animated: true, completion: nil);
         print ("after dismiss")
+    }
+    
+    func changeTextOnButton() {
+        let diceStackView   = self.scoreCardStackView.arrangedSubviews[1]
+        let aStackViewObj   = diceStackView as! UIStackView;
+        let lastButton      = self.playerObj.getLastButton();
+        let rowId           = KwPack.TagConvert().getRowIdFromButton(lastButton);
+        var multiplier = 0
+        if (rowId == 0) {
+            multiplier = 1
+        } else if (rowId == 1) {
+            multiplier = 2
+        } else if (rowId == 2){
+            multiplier = 3
+        } else if (rowId == 3){
+            multiplier = 4
+        } else if (rowId == 4){
+            multiplier = 5
+        } else if (rowId == 5){
+            multiplier = 6
+        }
         
-        
+        //now you get a button to iterate over
+        for subStack in aStackViewObj.arrangedSubviews {
+            let aButtonObj  = subStack as! UIButton;
+            let diceVal     = multiplier * aButtonObj.tag
+            
+            aButtonObj.setTitle(String(diceVal), for: UIControlState.normal);
+            
+        }
         
     }
     
+        
     //() are empty here because we have the data available within this function.
-    func setText () {
-        let playerName      = self.playerObj.getName() + ",";
+    func setText() {
+        let playerName      = self.playerObj.getName() + ":";
         let lastButton      = self.playerObj.getLastButton();
         let rowId           = KwPack.TagConvert().getRowIdFromButton(lastButton);
         var text            = ""
@@ -50,27 +81,27 @@ class VcUpper: UIViewController {
        
         
         if (rowId == 0) {
-            text = " how many ones did you get?"
+            text = " Score for 1s"
             
             
         } else if (rowId == 1) {
-            text = " how many twos did you get?"
+            text = " Score for 2s"
            
             
         } else if (rowId == 2) {
-            text = " how many threes did you get?"
+            text = " Score for 3s"
            
             
         } else if (rowId == 3) {
-            text = " how many fours did you get?"
+            text = " Score for 4s"
             
             
         } else if (rowId == 4) {
-            text = " how many fives did you get?"
+            text = " Score for 5s"
             
             
         } else if (rowId == 5) {
-            text = " how many sixes did you get?"
+            text = " Score for 6s"
            
             
         }
@@ -95,8 +126,6 @@ class VcUpper: UIViewController {
         self.upperRowDesc.attributedText = playerNameObj
         
     }
-
-    
     
     @IBAction func setScore(_ scoreCardButton: UIButton) {
        print ("setscore?")
