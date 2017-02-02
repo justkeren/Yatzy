@@ -12,6 +12,7 @@ class VcUpper: UIViewController {
 
     //must be set on segue prepare from the sending viewController
     var playerObj: KwPack.User!
+    var parentVc: VcPrimary!;
     @IBOutlet weak var upperRowDesc: UITextField!
     @IBOutlet weak var scoreButtonStack: UIStackView!
     @IBOutlet weak var scoreCardStackView: UIStackView!
@@ -166,14 +167,17 @@ class VcUpper: UIViewController {
             
                         
             //success back to the main controller
-            self.exitController(scoreCardButton)
-            
-            //self.dismiss(animated: true, completion: nil);
+            self.exitScoreCard();
             
         } else {
             //there is a problem
             print(rData);
         }
+    }
+    func exitScoreCard()
+    {
+        self.dismiss(animated: true, completion: nil);
+        self.parentVc.returnFromSegue()
     }
 
 }

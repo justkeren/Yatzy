@@ -16,9 +16,6 @@ class VcPrimary: UIViewController {
     @IBOutlet weak var masterStack: UIStackView!
     
     var playerNames: UIStackView!
-    
-   
-  
     var lastPlayer : KwPack.User!;
     
     @IBOutlet weak var goBackView: UIView!
@@ -54,7 +51,6 @@ class VcPrimary: UIViewController {
         
     }
     
-   
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -103,16 +99,18 @@ class VcPrimary: UIViewController {
     }
     
     func returnFromSegue() {
+        
+        print("we have returned from the segue");
         //this gets triggered everytime we return from a segue.
-        let hasEvent    = self.lastPlayer.getEventIsPending()
-        if (hasEvent == true) {
-            
+        let hasEvent    = self.lastPlayer.getNextEvent()
+        if (hasEvent != "") {
+            performSegue(withIdentifier: "toVcMedia", sender: self.lastPlayer)
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("prepared to segue to other view controller");
-        
+        //this function is triggered after every segue
         //before switching view down cast the sender as a User Obj
         let userObj     = sender as! KwPack.User;
         self.lastPlayer = userObj;
@@ -123,16 +121,24 @@ class VcPrimary: UIViewController {
         //set the player obj in the controller we are about to show
         if (vcName == "Yatzy.VcDice") {
             let nextCtrl = segue.destination as! VcDice;
-            nextCtrl.playerObj = userObj;
+            nextCtrl.playerObj   = userObj;
+            nextCtrl.parentVc    = self;
         } else if (vcName == "Yatzy.VcUpper") {
             let nextCtrl = segue.destination as! VcUpper;
-            nextCtrl.playerObj = userObj;
+            nextCtrl.playerObj   = userObj;
+             nextCtrl.parentVc   = self;
         } else if (vcName == "Yatzy.VcSingleChoice") {
             let nextCtrl = segue.destination as! VcSingleChoice;
-            nextCtrl.playerObj = userObj;
+            nextCtrl.playerObj   = userObj;
+            nextCtrl.parentVc    = self;
         } else if (vcName == "Yatzy.VcChoice") {
             let nextCtrl = segue.destination as! VcChoice;
-            nextCtrl.playerObj = userObj;
+            nextCtrl.playerObj   = userObj;
+            nextCtrl.parentVc    = self;
+        }else if (vcName == "Yatzy.VcMedia") {
+            let nextCtrl = segue.destination as! VcMedia;
+            nextCtrl.playerObj   = userObj;
+            nextCtrl.parentVc    = self;
         } else {
             print("Failed to match segue to a controller");
         }
@@ -160,7 +166,7 @@ class VcPrimary: UIViewController {
         
         print("Row: \(rowId), pressed")
 
-
+// we know segue to the correct scorecard controller, the first thing a segue does is trigger the prepare function in this class.
         if (rowId < 6) {
             
             print("jumping to UpperView");

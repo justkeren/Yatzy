@@ -9,26 +9,28 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Vc Images-->
+        <!--Vc Media-->
         <scene sceneID="rP8-Ds-v3t">
             <objects>
-                <viewController storyboardIdentifier="vcImages" id="QRz-ae-FlK" customClass="VcImages" customModule="Yatzy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VcMedia" id="QRz-ae-FlK" customClass="VcMedia" customModule="Yatzy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aKl-CH-LYs"/>
                         <viewControllerLayoutGuide type="bottom" id="RVt-wJ-dYf"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="HO7-wo-5dg">
+                    <view key="view" alpha="0.45000000000000001" contentMode="scaleToFill" id="HO7-wo-5dg">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FkO-4h-ipt" userLabel="ImageHolder">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="FkO-4h-ipt" userLabel="ImageHolder">
                                 <rect key="frame" x="264" y="205" width="467" height="385"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="0.0" colorSpace="calibratedRGB"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="ImageHolder" destination="FkO-4h-ipt" id="BDt-7T-yYs"/>
                         <outlet property="imageHolder" destination="FkO-4h-ipt" id="PkG-im-o6j"/>
                     </connections>
                 </viewController>
@@ -294,7 +296,7 @@
                                 <rect key="frame" x="429" y="287" width="125" height="189"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AHB-jM-sCi" userLabel="How Many Did You Get?">
-                                        <rect key="frame" x="48.5" y="0.0" width="28" height="30"/>
+                                        <rect key="frame" x="48" y="0.0" width="28" height="30"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -331,7 +333,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" tag="99" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKv-jp-YvK" userLabel="count2">
-                                        <rect key="frame" x="12.5" y="150" width="100" height="39"/>
+                                        <rect key="frame" x="12" y="150" width="100" height="39"/>
                                         <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="olq-SC-Zfw"/>
@@ -804,4 +806,7 @@
             <point key="canvasLocation" x="817.96875" y="631.25"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dice1" width="63" height="50"/>
+    </resources>
 </document>

@@ -40,14 +40,6 @@
             </objects>
             <point key="canvasLocation" x="-140.86956521739131" y="457.58454106280203"/>
         </scene>
-        <!--vcImages-->
-        <scene sceneID="BG8-gZ-W1u">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="vcImages" id="d5g-ca-OR8" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6Iv-eg-TnN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-984" y="-956"/>
-        </scene>
         <!--vcStart-->
         <scene sceneID="QZT-CT-Cbf">
             <objects>
@@ -55,6 +47,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MFD-Bf-odJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1239" y="-1109"/>
+        </scene>
+        <!--VcMedia-->
+        <scene sceneID="tjO-hU-Uaa">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="VcMedia" storyboardName="Main" referencedIdentifier="VcMedia" id="cFp-lF-UGU" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Q5H-kJ-SVm"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L1d-Ta-O2p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-880" y="-981"/>
         </scene>
         <!--Vc Primary-->
         <scene sceneID="zHX-2p-LxY">
@@ -1177,6 +1179,12 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aim-tY-Ssb">
+                                <rect key="frame" x="771" y="550" width="123" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.49411764705882355" green="0.075817027452037639" blue="0.27350452183413293" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -1204,7 +1212,7 @@
                         <segue destination="XeS-is-VcW" kind="modal" identifier="toSingleView" id="FvI-bd-JKD"/>
                         <segue destination="sai-20-j1z" kind="modal" identifier="toChoiceView" id="k99-K6-X0t"/>
                         <segue destination="DzT-Cj-zF0" kind="modal" identifier="toVcStart" id="Zoo-md-d7R"/>
-                        <segue destination="d5g-ca-OR8" kind="modal" id="e89-1v-UG2"/>
+                        <segue destination="cFp-lF-UGU" kind="modal" identifier="toVcMedia" id="mU9-9o-7ix"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JCl-Kc-gxE" sceneMemberID="firstResponder"/>

@@ -12,6 +12,7 @@ class VcDice: UIViewController {
 
     //must be set on segue prepare from the sending viewController
     var playerObj: KwPack.User!
+    var parentVc: VcPrimary!;
     
     @IBOutlet weak var textDescription: UITextField!
     @IBOutlet weak var scoreCardStackView: UIStackView!
@@ -96,11 +97,16 @@ class VcDice: UIViewController {
             print("In Row: \(rowId)");
             
             //success back to the main controller
-            self.dismiss(animated: true, completion: nil);
+            self.exitScoreCard();
             
         } else {
             //there is a problem
             print(rData);
         }
+    }
+    func exitScoreCard()
+    {
+        self.dismiss(animated: true, completion: nil);
+        self.parentVc.returnFromSegue()
     }
 }

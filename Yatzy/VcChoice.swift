@@ -13,6 +13,7 @@ class VcChoice: UIViewController {
     
     //must be set on segue prepare from the sending viewController
     var playerObj: KwPack.User!
+    var parentVc: VcPrimary!;
     var tempScore = ""
     
     
@@ -54,13 +55,10 @@ class VcChoice: UIViewController {
         //object that holds the text content
         let textObj         = NSMutableAttributedString(string:text)
         let mainColor       = KwPack.CustomYatzy().getMainColor()
-        
         let changeObj = [NSFontAttributeName : UIFont.boldSystemFont(ofSize: 24), NSForegroundColorAttributeName : mainColor];
         
        
         let playerNameObj = NSMutableAttributedString(string:playerName, attributes: changeObj)
-        
-    
         
         playerNameObj.append(textObj)
         
@@ -131,7 +129,7 @@ class VcChoice: UIViewController {
                 print("In Row: \(rowId)");
                 
                 //success back to the main controller
-                self.dismiss(animated: true, completion: nil);
+                self.exitScoreCard();
                 
             } else {
                 //there is a problem
@@ -141,8 +139,12 @@ class VcChoice: UIViewController {
                 self.scoreScreen.text = rData
                 
             }
-            
         }
-
+    }
+    
+    func exitScoreCard()
+    {
+        self.dismiss(animated: true, completion: nil);
+        self.parentVc.returnFromSegue()
     }
 }

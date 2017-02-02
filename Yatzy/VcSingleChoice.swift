@@ -12,6 +12,7 @@ class VcSingleChoice: UIViewController {
 
     //must be set on segue prepare from the sending viewController
     var playerObj: KwPack.User!
+    var parentVc: VcPrimary!;
     
     @IBOutlet weak var TextDescription: UITextField!
     
@@ -71,13 +72,18 @@ class VcSingleChoice: UIViewController {
             print("For Player: \(self.playerObj.getId())");
             print("In Row: \(rowId)");
             
-            //success back to the main controller
-            self.dismiss(animated: true, completion: nil);
+            //success back to the main controller.
+            self.exitScoreCard();
             
         } else {
             //there is a problem
             print(rData);
         }
     }
-
+    
+    func exitScoreCard()
+    {
+        self.dismiss(animated: true, completion: nil);
+        self.parentVc.returnFromSegue()
+    }
 }

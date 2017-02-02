@@ -30,16 +30,14 @@ extension KwPack {
         var playerStack: UIStackView!
         var playerName: String!
         
-        var eventIsPending = false;
-        var nextEvent: String!;
+        var nextEvent = "";
         
-        func setNextEvent(_ image: String) {
-            
-            self.eventIsPending     = true;
-            self.nextEvent          = image;
+        func setNextEvent(_ text: String) {
+        //this just sets the variable nextEvent to the text it was given
+            self.nextEvent          = text;
         }
-        func getEventIsPending() -> Bool {
-            return self.eventIsPending;
+        func getNextEvent() -> String {
+            return self.nextEvent;
         }
 
         func setId(_ id: Int) -> Void {
@@ -381,11 +379,10 @@ extension KwPack {
                 return "Invalid Score";
             } else if (scoreVal == 1){
                 self.updateScore("down", index, 50, "50");
-                
-                self.setNextEvent("mariaClapping");
-                
+                self.setNextEvent("gotYatzy");
             } else if (scoreVal == 0) {
                 self.updateScore("down", index, 0, "0");
+                self.setNextEvent("noYatzyForU");
             }
             
             return "";
