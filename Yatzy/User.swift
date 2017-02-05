@@ -14,23 +14,32 @@ extension KwPack {
     
         var pId: Int!;
         var isActive    = true;
-        
 
         var uScoreKeeper = [0,0,0,0,0,0];       //player's scores for upper
         var lScoreKeeper = [0,0,0,0,0,0,0,0,0]; //players score for the lower section
     
-        var lastScoreInput: UIButton!;
-        var playerButtons = Array<UIButton>();
-        var upperScoreButton: UIButton!;
-        var lowerScoreButton: UIButton!;
-        var bonusScoreButton: UIButton!;
-        var playerNameButton: UIButton!;
+        var lastScoreInput:     UIButton!;
+        var playerButtons =     Array<UIButton>();
+        var upperScoreButton:   UIButton!;
+        var lowerScoreButton:   UIButton!;
+        var bonusScoreButton:   UIButton!;
+        var playerNameButton:   UIButton!;
         
 //since we dont have the stackview until after the player object is created, this is how you create an empty variable that is waiting for a stack object
         var playerStack: UIStackView!
         var playerName: String!
-        
         var nextEvent = "";
+        var advanceToNextPlayer = false
+        
+        func setTurnComplete(_ active: Bool) {
+            self.advanceToNextPlayer = active
+           
+        }
+        
+        func getTurnComplete() -> Bool {
+            return self.advanceToNextPlayer
+            
+        }
         
         func setNextEvent(_ text: String) {
         //this just sets the variable nextEvent to the text it was given
@@ -156,6 +165,14 @@ extension KwPack {
             self.updateBonusScore();
             self.updateUpperScore();
             self.updateTotalScore();
+            
+              //  if (label == ""){
+               //     self.setTurnComplete(false)
+              //  } else {
+                
+                    self.setTurnComplete(true)
+               // }
+            
         }
 
         //set upper scores

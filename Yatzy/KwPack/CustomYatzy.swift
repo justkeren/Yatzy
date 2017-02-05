@@ -57,6 +57,38 @@ extension KwPack {
                 }
             }
         }
+        
+        
+        
+        func changebackStackColor (_ stackToColor: UIStackView) -> Void {
+            //for each button in the araay do something. stackview that only contains buttons for now
+             let buttonColor1 = KwPack.Colors().getColorFromRGB(0, 0, 255)
+            for subViewObj in stackToColor.arrangedSubviews {
+                
+                let className   = String(describing: subViewObj.classForCoder);
+                
+                if (className == "UIButton") {
+                    
+                    //this makes it explicit that the element is a button
+                    let aButtonObj = subViewObj as! UIButton;
+                    
+                    
+                      KwPack.Buttons().setButtonColor(aButtonObj, buttonColor1)
+
+                    
+                    //aButtonObj.frame = CGRect(x: 160, y: 100, width: 50, height: 50)
+                    aButtonObj.layer.cornerRadius = 0.5 * aButtonObj.bounds.size.width
+                    aButtonObj.clipsToBounds = true
+                    
+                } else if (className ==  "UIStackView") {
+                    let aStackViewObj = subViewObj as! UIStackView;
+                    self.formatScoreButtonsInStack(aStackViewObj)
+                }
+            }
+        }
     }
+    
 }
+
+
 

@@ -13,10 +13,12 @@ class VcPrimary: UIViewController {
     //this holds the buttons: upperscore total, bonus and lowerscore total for all players (array)
     @IBOutlet var allButtons: [UIButton]!;
 
+    @IBOutlet weak var testButton: UIButton!
     @IBOutlet weak var masterStack: UIStackView!
     
     var playerNames: UIStackView!
     var lastPlayer : KwPack.User!;
+    
     
     @IBOutlet weak var goBackView: UIView!
    
@@ -96,7 +98,9 @@ class VcPrimary: UIViewController {
             
             //print("Added: \(count) users to a new game");
         }
+        
     }
+    
     
     func returnFromSegue() {
         
@@ -106,7 +110,68 @@ class VcPrimary: UIViewController {
         if (hasEvent != "") {
             performSegue(withIdentifier: "toVcMedia", sender: self.lastPlayer)
         }
+        
+        self.setPlayerTurnColors()
+        
+        
     }
+    
+    func setPlayerTurnColors () -> Void {
+        let currentPlayer   = self.getCurrentPlayer()
+        //let current         = currentPlayer.getTurnComplete()
+       
+        for allPlayersObj in KwPack.PermStore.obj.userObjs {
+            //if playerObj equal to currentPlayer they are the same. I can use either to color the stack.
+            if (allPlayersObj.getId() == currentPlayer.getId()){
+                //this is the current player
+               KwPack.CustomYatzy().formatScoreButtonsInStack(currentPlayer.getStack())
+            } else {
+                //this is everyone that is not current
+                
+                KwPack.CustomYatzy().changebackStackColor(allPlayersObj.getStack())
+            }
+            
+        }
+  
+    }
+    
+    func getCurrentPlayer() -> KwPack.User {
+        //FUNCTION: RETURNS CURRENT PLAYER ONLY
+        let activePlayerCheck   = self.lastPlayer.getTurnComplete()
+        //this is a varaible that holds a single instance of a user
+        var nextPlayerObj       = self.lastPlayer
+        
+        
+        if (activePlayerCheck == true) {
+            let lastPlayerTest = KwPack.PermStore.obj.userObjs.last
+            
+            if (lastPlayerTest?.getTurnComplete() == true) {
+                nextPlayerObj = KwPack.PermStore.obj.userObjs.first
+                
+            } else {
+                
+                var foundYou = false
+                
+                for playerObj in KwPack.PermStore.obj.userObjs {
+                    
+                    let isItYou = playerObj.getTurnComplete()
+                    if (isItYou == true) {
+                        //here we know we want the next player
+                        foundYou = true
+                    } else if (foundYou == true) {
+                        nextPlayerObj = playerObj
+                        foundYou = false
+                    }
+                }
+            }
+            
+            self.lastPlayer.setTurnComplete(false)
+            
+        }
+        return nextPlayerObj!
+    }
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("prepared to segue to other view controller");
@@ -157,6 +222,7 @@ class VcPrimary: UIViewController {
         }
     }
     
+ 
     @IBAction func scoreInput(_ scoreButton: UIButton) {
         // this fuction is responsible for which scorecard you will see
         

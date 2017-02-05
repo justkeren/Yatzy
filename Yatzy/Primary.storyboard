@@ -1182,8 +1182,9 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aim-tY-Ssb">
                                 <rect key="frame" x="771" y="550" width="123" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="TEST"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.49411764705882355" green="0.075817027452037639" blue="0.27350452183413293" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1191,6 +1192,7 @@
                     <connections>
                         <outlet property="goBackView" destination="ia6-yH-X1n" id="lFC-er-Y0H"/>
                         <outlet property="masterStack" destination="UaQ-QG-pPP" id="bvu-IO-hdm"/>
+                        <outlet property="testButton" destination="aim-tY-Ssb" id="ZDu-hA-cIV"/>
                         <outletCollection property="allButtons" destination="aDa-TU-TuE" collectionClass="NSMutableArray" id="skt-VG-nbu"/>
                         <outletCollection property="allButtons" destination="HKV-sc-QHO" collectionClass="NSMutableArray" id="9K4-2l-r0F"/>
                         <outletCollection property="allButtons" destination="MDH-JI-Qn1" collectionClass="NSMutableArray" id="0tK-Q8-hPA"/>

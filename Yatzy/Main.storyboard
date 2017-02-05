@@ -21,17 +21,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="FkO-4h-ipt" userLabel="ImageHolder">
-                                <rect key="frame" x="264" y="205" width="467" height="385"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="0.0" colorSpace="calibratedRGB"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FkO-4h-ipt" userLabel="ImageHolder">
+                                <rect key="frame" x="342" y="231" width="312" height="216"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                             </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rDJ-yy-0LR" userLabel="playerName">
+                                <rect key="frame" x="388" y="135" width="242" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RVt-wJ-dYf" firstAttribute="top" secondItem="FkO-4h-ipt" secondAttribute="bottom" constant="321" id="EiO-WH-q4b"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FkO-4h-ipt" secondAttribute="trailing" constant="350" id="Fhk-pe-wDo"/>
+                            <constraint firstItem="FkO-4h-ipt" firstAttribute="leading" secondItem="HO7-wo-5dg" secondAttribute="leadingMargin" constant="322" id="qSr-ra-nmm"/>
+                            <constraint firstItem="FkO-4h-ipt" firstAttribute="top" secondItem="aKl-CH-LYs" secondAttribute="bottom" constant="211" id="tYq-aR-Ub9"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="ImageHolder" destination="FkO-4h-ipt" id="BDt-7T-yYs"/>
-                        <outlet property="imageHolder" destination="FkO-4h-ipt" id="PkG-im-o6j"/>
+                        <outlet property="ImageHolder" destination="FkO-4h-ipt" id="xUH-OJ-37x"/>
+                        <outlet property="playerNameTextField" destination="rDJ-yy-0LR" id="fHt-zH-go3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BSz-2j-rAK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -806,7 +819,4 @@
             <point key="canvasLocation" x="817.96875" y="631.25"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="dice1" width="63" height="50"/>
-    </resources>
 </document>
