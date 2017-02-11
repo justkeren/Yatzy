@@ -85,7 +85,7 @@ extension KwPack {
             
             if (rowId == 7){
               self.upperScoreButton = aButton
-            
+
             } else if (rowId == 6){
                 self.bonusScoreButton = aButton
                 
@@ -96,6 +96,7 @@ extension KwPack {
                 self.playerNameButton = aButton
             } else {
                 self.playerButtons.append(aButton);
+   
             }
             
         }
@@ -161,6 +162,7 @@ extension KwPack {
             
             //update the button
             self.getLastButton().setTitle(label, for: UIControlState.normal);
+          
             
             self.updateBonusScore();
             self.updateUpperScore();

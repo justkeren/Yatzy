@@ -499,7 +499,7 @@
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal">
-                                                    <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="0.16285851883561644" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="scoreInput:" destination="C5e-xk-3aG" eventType="touchUpInside" id="Kmx-tT-gXc"/>
@@ -1179,20 +1179,12 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aim-tY-Ssb">
-                                <rect key="frame" x="771" y="550" width="123" height="73"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="TEST"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.49411764705882355" green="0.075817027452037639" blue="0.27350452183413293" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="goBackView" destination="ia6-yH-X1n" id="lFC-er-Y0H"/>
                         <outlet property="masterStack" destination="UaQ-QG-pPP" id="bvu-IO-hdm"/>
-                        <outlet property="testButton" destination="aim-tY-Ssb" id="ZDu-hA-cIV"/>
                         <outletCollection property="allButtons" destination="aDa-TU-TuE" collectionClass="NSMutableArray" id="skt-VG-nbu"/>
                         <outletCollection property="allButtons" destination="HKV-sc-QHO" collectionClass="NSMutableArray" id="9K4-2l-r0F"/>
                         <outletCollection property="allButtons" destination="MDH-JI-Qn1" collectionClass="NSMutableArray" id="0tK-Q8-hPA"/>
@@ -1209,6 +1201,10 @@
                         <outletCollection property="allButtons" destination="PVN-A0-r4P" collectionClass="NSMutableArray" id="xxX-SX-cVT"/>
                         <outletCollection property="allButtons" destination="fnY-5J-7Ma" collectionClass="NSMutableArray" id="qMl-50-iMd"/>
                         <outletCollection property="allButtons" destination="MLS-J6-ZJu" collectionClass="NSMutableArray" id="7FO-MC-m59"/>
+                        <outletCollection property="allScoreButtons" destination="2xE-Fh-3mB" collectionClass="NSMutableArray" id="egE-9B-d5t"/>
+                        <outletCollection property="allScoreButtons" destination="OfI-8X-K7L" collectionClass="NSMutableArray" id="YZo-fK-E4z"/>
+                        <outletCollection property="allScoreButtons" destination="ioh-QR-aLu" collectionClass="NSMutableArray" id="F9j-CR-uIF"/>
+                        <outletCollection property="allScoreButtons" destination="pOp-Wc-Wxb" collectionClass="NSMutableArray" id="F9q-Ij-8S4"/>
                         <segue destination="zkY-jd-w1v" kind="modal" identifier="toUpperView" id="dO2-oU-DLG"/>
                         <segue destination="879-mj-TmZ" kind="modal" identifier="toDiceView" id="c4Y-rp-nRH"/>
                         <segue destination="XeS-is-VcW" kind="modal" identifier="toSingleView" id="FvI-bd-JKD"/>

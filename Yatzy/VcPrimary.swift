@@ -13,6 +13,9 @@ class VcPrimary: UIViewController {
     //this holds the buttons: upperscore total, bonus and lowerscore total for all players (array)
     @IBOutlet var allButtons: [UIButton]!;
 
+    
+    
+    @IBOutlet var allScoreButtons: [UIButton]!
     @IBOutlet weak var testButton: UIButton!
     @IBOutlet weak var masterStack: UIStackView!
     
@@ -31,6 +34,7 @@ class VcPrimary: UIViewController {
         //called once a game is restarted
         let playerCount = self.countPlayers()
         self.initGame(playerCount);
+    
     }
     //dont need anything in () because it has access to what it needs in the Class (playerNames).
     func countPlayers() -> Int {
@@ -99,6 +103,10 @@ class VcPrimary: UIViewController {
             //print("Added: \(count) users to a new game");
         }
         
+//        self.setButtonTitle()
+       // KwPack.CustomYatzy().formatScoreButtonsInStack(self.masterStack)
+    
+        
     }
     
     
@@ -115,6 +123,24 @@ class VcPrimary: UIViewController {
         
         
     }
+    
+//    func setButtonTitle() {
+//        for aButton in self.allScoreButtons {
+//            //aButton goes in the () because the methods needs one button. aButton is one button at a time (array).
+//            let rowId = KwPack.TagConvert().getRowIdFromButton(aButton)
+//            
+//            if (rowId == 0){
+//                aButton.setTitle("Ones", for: UIControlState.normal)
+//                print("Ones")
+//            }
+//            
+//        }
+//        
+//        print("set button title ran")
+//       
+//        
+//    }
+    
     
     func setPlayerTurnColors () -> Void {
         let currentPlayer   = self.getCurrentPlayer()
