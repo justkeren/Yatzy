@@ -21,7 +21,7 @@ class VcPrimary: UIViewController {
     
     var playerNames: UIStackView!
     var lastPlayer : KwPack.User!;
-    
+    var gradientLayer: CAGradientLayer!
     
     @IBOutlet weak var goBackView: UIView!
    
@@ -35,6 +35,11 @@ class VcPrimary: UIViewController {
         let playerCount = self.countPlayers()
         self.initGame(playerCount);
     
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        createGradientLayer()
     }
     //dont need anything in () because it has access to what it needs in the Class (playerNames).
     func countPlayers() -> Int {
@@ -104,7 +109,7 @@ class VcPrimary: UIViewController {
         }
         
 //        self.setButtonTitle()
-       // KwPack.CustomYatzy().formatScoreButtonsInStack(self.masterStack)
+      //  KwPack.CustomYatzy().formatScoreButtonsInStack(self.masterStack)
     
         
     }
@@ -119,7 +124,7 @@ class VcPrimary: UIViewController {
             performSegue(withIdentifier: "toVcMedia", sender: self.lastPlayer)
         }
         
-        self.setPlayerTurnColors()
+    //    self.setPlayerTurnColors()
         
         
     }
@@ -161,6 +166,23 @@ class VcPrimary: UIViewController {
   
     }
     
+    func createGradientLayer() {
+        gradientLayer = CAGradientLayer()
+        
+        let color1 = KwPack.Colors().getColorFromHex("FFFF1C").cgColor
+        let color2 = KwPack.Colors().getColorFromHex("CCF349").cgColor
+        let color3 = KwPack.Colors().getColorFromHex("99E776").cgColor
+        let color4 = KwPack.Colors().getColorFromHex("66DBA4").cgColor
+        let color5 = KwPack.Colors().getColorFromHex("33CFD1").cgColor
+        let color6 = KwPack.Colors().getColorFromHex("00C3FF").cgColor
+        
+        gradientLayer.frame = self.view.bounds
+        
+        gradientLayer.colors = [color1, color2, color3, color4, color5, color6]
+       
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
+       
+    }
     func getCurrentPlayer() -> KwPack.User {
         //FUNCTION: RETURNS CURRENT PLAYER ONLY
         let activePlayerCheck   = self.lastPlayer.getTurnComplete()
