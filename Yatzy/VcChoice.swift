@@ -16,8 +16,7 @@ class VcChoice: UIViewController {
     var parentVc: VcPrimary!;
     var tempScore = ""
     
-    
-    @IBOutlet weak var button0: UIButton!
+    @IBOutlet weak var enterB: UIButton!
     
     @IBOutlet weak var scoreScreen: UITextField!
     @IBOutlet weak var textDescription: UITextField!
@@ -27,8 +26,20 @@ class VcChoice: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setText()
+        
+        
+        self.enterB.layer.shadowOffset = CGSize(width: 5, height: 5)
+        
+       
+        enterB.layer.shadowRadius = 5
+        
+        // change the color of the shadow (has to be CGColor)
+        enterB.layer.shadowColor = UIColor.gray.cgColor
+        
+        // display the shadow
+        enterB.layer.shadowOpacity = 1.0
        // KwPack.CustomYatzy().formatScoreButtonsInStack(self.masterScoreStack)
-        self.changeButtonColor()
+        
        
         // Do any additional setup after loading the view.
     }
@@ -66,25 +77,7 @@ class VcChoice: UIViewController {
         self.textDescription.attributedText = playerNameObj
         
     }
-    func changeButtonColor() {
-        
-    
-    let gradient: CAGradientLayer = CAGradientLayer()
-        
-        
-        
-    gradient.frame = self.button0.bounds
-        
-        let color1 = KwPack.Colors().getColorFromHex("71DD9A").cgColor
-        let color2 = KwPack.Colors().getColorFromHex("55D7B3").cgColor
-      
-        
-        gradient.colors = [color1, color2]
 
-    self.button0.layer.insertSublayer(gradient, at: 0)
-   
-    
-    }
     
     @IBAction func setScore(_ scoreCardButton: UIButton) {
         

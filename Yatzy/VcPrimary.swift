@@ -13,8 +13,6 @@ class VcPrimary: UIViewController {
     //this holds the buttons: upperscore total, bonus and lowerscore total for all players (array)
     @IBOutlet var allButtons: [UIButton]!;
 
-    
-    
     @IBOutlet var allScoreButtons: [UIButton]!
     @IBOutlet weak var testButton: UIButton!
     @IBOutlet weak var masterStack: UIStackView!
@@ -34,6 +32,7 @@ class VcPrimary: UIViewController {
         //called once a game is restarted
         let playerCount = self.countPlayers()
         self.initGame(playerCount);
+        KwPack.CustomYatzy().testFormatButtons(self.masterStack) 
     
     }
 
@@ -41,6 +40,7 @@ class VcPrimary: UIViewController {
         super.viewWillAppear(animated)
         createGradientLayer()
     }
+    
     //dont need anything in () because it has access to what it needs in the Class (playerNames).
     func countPlayers() -> Int {
         var playerCount = 0
@@ -147,79 +147,81 @@ class VcPrimary: UIViewController {
 //    }
     
     
-    func setPlayerTurnColors () -> Void {
-        let currentPlayer   = self.getCurrentPlayer()
-        //let current         = currentPlayer.getTurnComplete()
-       
-        for allPlayersObj in KwPack.PermStore.obj.userObjs {
-            //if playerObj equal to currentPlayer they are the same. I can use either to color the stack.
-            if (allPlayersObj.getId() == currentPlayer.getId()){
-                //this is the current player
-               KwPack.CustomYatzy().formatScoreButtonsInStack(currentPlayer.getStack())
-            } else {
-                //this is everyone that is not current
-                
-                KwPack.CustomYatzy().changebackStackColor(allPlayersObj.getStack())
-            }
-            
-        }
-  
-    }
+//    func setPlayerTurnColors () -> Void {
+//        let currentPlayer   = self.getCurrentPlayer()
+//        //let current         = currentPlayer.getTurnComplete()
+//       
+//        for allPlayersObj in KwPack.PermStore.obj.userObjs {
+//            //if playerObj equal to currentPlayer they are the same. I can use either to color the stack.
+//            if (allPlayersObj.getId() == currentPlayer.getId()){
+//                //this is the current player
+//               KwPack.CustomYatzy().formatScoreButtonsInStack(currentPlayer.getStack())
+//            } else {
+//                //this is everyone that is not current
+//                
+//                KwPack.CustomYatzy().changebackStackColor(allPlayersObj.getStack())
+//            }
+//            
+//        }
+//  
+//    }
     
     func createGradientLayer() {
         gradientLayer = CAGradientLayer()
         
-        let color1 = KwPack.Colors().getColorFromHex("FFFF1C").cgColor
-        let color2 = KwPack.Colors().getColorFromHex("CCF349").cgColor
-        let color3 = KwPack.Colors().getColorFromHex("99E776").cgColor
-        let color4 = KwPack.Colors().getColorFromHex("66DBA4").cgColor
-        let color5 = KwPack.Colors().getColorFromHex("33CFD1").cgColor
-        let color6 = KwPack.Colors().getColorFromHex("00C3FF").cgColor
+        
+        let color1 = KwPack.Colors().getColorFromHex("FF8235").cgColor
+        let color2 = KwPack.Colors().getColorFromHex("30E8BF").cgColor
+
         
         gradientLayer.frame = self.view.bounds
         
-        gradientLayer.colors = [color1, color2, color3, color4, color5, color6]
+        gradientLayer.colors = [color1, color2]
        
+        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
+        gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
+        
         self.view.layer.insertSublayer(gradientLayer, at: 0)
        
     }
-    func getCurrentPlayer() -> KwPack.User {
-        //FUNCTION: RETURNS CURRENT PLAYER ONLY
-        let activePlayerCheck   = self.lastPlayer.getTurnComplete()
-        //this is a varaible that holds a single instance of a user
-        var nextPlayerObj       = self.lastPlayer
-        
-        
-        if (activePlayerCheck == true) {
-            let lastPlayerTest = KwPack.PermStore.obj.userObjs.last
-            
-            if (lastPlayerTest?.getTurnComplete() == true) {
-                nextPlayerObj = KwPack.PermStore.obj.userObjs.first
-                
-            } else {
-                
-                var foundYou = false
-                
-                for playerObj in KwPack.PermStore.obj.userObjs {
-                    
-                    let isItYou = playerObj.getTurnComplete()
-                    if (isItYou == true) {
-                        //here we know we want the next player
-                        foundYou = true
-                    } else if (foundYou == true) {
-                        nextPlayerObj = playerObj
-                        foundYou = false
-                    }
-                }
-            }
-            
-            self.lastPlayer.setTurnComplete(false)
-            
-        }
-        return nextPlayerObj!
-    }
     
-    
+//    func getCurrentPlayer() -> KwPack.User {
+//        //FUNCTION: RETURNS CURRENT PLAYER ONLY
+//        let activePlayerCheck   = self.lastPlayer.getTurnComplete()
+//        //this is a varaible that holds a single instance of a user
+//        var nextPlayerObj       = self.lastPlayer
+//        
+//        
+//        if (activePlayerCheck == true) {
+//            let lastPlayerTest = KwPack.PermStore.obj.userObjs.last
+//            
+//            if (lastPlayerTest?.getTurnComplete() == true) {
+//                nextPlayerObj = KwPack.PermStore.obj.userObjs.first
+//                
+//            } else {
+//                
+//                var foundYou = false
+//                
+//                for playerObj in KwPack.PermStore.obj.userObjs {
+//                    
+//                    let isItYou = playerObj.getTurnComplete()
+//                    if (isItYou == true) {
+//                        //here we know we want the next player
+//                        foundYou = true
+//                    } else if (foundYou == true) {
+//                        nextPlayerObj = playerObj
+//                        foundYou = false
+//                    }
+//                }
+//            }
+//            
+//            self.lastPlayer.setTurnComplete(false)
+//            
+//        }
+//        return nextPlayerObj!
+//    }
+//    
+//    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("prepared to segue to other view controller");

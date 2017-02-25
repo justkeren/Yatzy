@@ -17,6 +17,8 @@ class VcUpper: UIViewController {
     @IBOutlet weak var scoreButtonStack: UIStackView!
     @IBOutlet weak var scoreCardStackView: UIStackView!
 
+    @IBOutlet weak var scoreCardView: UIView!
+     var gradientLayer: CAGradientLayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +41,8 @@ class VcUpper: UIViewController {
         self.dismiss(animated: true, completion: nil);
         print ("after dismiss")
     }
-    
+
+
     func changeTextOnButton() {
         let diceStackView   = self.scoreCardStackView.arrangedSubviews[1]
         let aStackViewObj   = diceStackView as! UIStackView;
@@ -74,7 +77,7 @@ class VcUpper: UIViewController {
         
     //() are empty here because we have the data available within this function.
     func setText() {
-        let playerName      = self.playerObj.getName() + ":";
+        let playerName      = self.playerObj.getName() + "'s";
         let lastButton      = self.playerObj.getLastButton();
         let rowId           = KwPack.TagConvert().getRowIdFromButton(lastButton);
         var text            = ""
@@ -82,27 +85,27 @@ class VcUpper: UIViewController {
        
         
         if (rowId == 0) {
-            text = " Score for 1s"
+            text = " score for Ones"
             
             
         } else if (rowId == 1) {
-            text = " Score for 2s"
+            text = " score for Twos"
            
             
         } else if (rowId == 2) {
-            text = " Score for 3s"
+            text = " score for Threes"
            
             
         } else if (rowId == 3) {
-            text = " Score for 4s"
+            text = " score for Fours"
             
             
         } else if (rowId == 4) {
-            text = " Score for 5s"
+            text = " score for Fives"
             
             
         } else if (rowId == 5) {
-            text = " Score for 6s"
+            text = " score for Sixes"
            
             
         }
@@ -114,7 +117,7 @@ class VcUpper: UIViewController {
         
         
         //here is an object array that will change the font color and make it bold
-        let changeObj = [NSFontAttributeName : UIFont.boldSystemFont(ofSize: 24), NSForegroundColorAttributeName : mainColor];
+        let changeObj = [NSFontAttributeName : UIFont.boldSystemFont(ofSize: 20), NSForegroundColorAttributeName : mainColor];
 
         //object that holds the playerName, this is the one we want to make different
         //add the changeObjs

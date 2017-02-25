@@ -10,12 +10,13 @@ import UIKit
 
 class VcStart: UIViewController {
 
-   
-    @IBOutlet weak var playerNameStack: UIStackView!
 
+    @IBOutlet weak var playerNameStack: UIStackView!
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
+   
 
     }
     
@@ -30,6 +31,9 @@ class VcStart: UIViewController {
     @IBAction func startGame (_ startGameButton: UIButton) {
         performSegue(withIdentifier: "toVcPrimary", sender: "")
     }
+    
+
+
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("prepared to segue to other view controller");
