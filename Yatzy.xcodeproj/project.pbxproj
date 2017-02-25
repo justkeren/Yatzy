@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EA0C783C1E4F63650028B750 /* circusSong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA0C783B1E4F63650028B750 /* circusSong.mp3 */; };
+		EA77079B1E61A94800B5A862 /* circusSong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA77079A1E61A94800B5A862 /* circusSong.mp3 */; };
 		EA9714031E3CF32A0049719D /* Framework in Resources */ = {isa = PBXBuildFile; fileRef = EA9714021E3CF32A0049719D /* Framework */; };
 		EA9714131E3CF33E0049719D /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = EA9714041E3CF33E0049719D /* Base.lproj */; };
 		EA9714141E3CF33E0049719D /* KwPack in Resources */ = {isa = PBXBuildFile; fileRef = EA9714051E3CF33E0049719D /* KwPack */; };
@@ -35,7 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EA0C783B1E4F63650028B750 /* circusSong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = circusSong.mp3; path = "../../../../../Music/iTunes/iTunes Media/Music/Unknown Artist/Unknown Album/circusSong.mp3"; sourceTree = "<group>"; };
+		EA77079A1E61A94800B5A862 /* circusSong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = circusSong.mp3; sourceTree = "<group>"; };
 		EA9714021E3CF32A0049719D /* Framework */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Framework; sourceTree = "<group>"; };
 		EA9714041E3CF33E0049719D /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
 		EA9714051E3CF33E0049719D /* KwPack */ = {isa = PBXFileReference; lastKnownFileType = folder; path = KwPack; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 		EA97143E1E3CF45A0049719D /* Utillities */ = {
 			isa = PBXGroup;
 			children = (
-				EA0C783B1E4F63650028B750 /* circusSong.mp3 */,
+				EA77079A1E61A94800B5A862 /* circusSong.mp3 */,
 				EAA7CBFF1E43A92700FC0852 /* pianoSound.mp3 */,
 				EA9714381E3CF4520049719D /* CustomYatzy.swift */,
 				EA9714391E3CF4520049719D /* PermStore.swift */,
@@ -214,7 +214,7 @@
 				EA9714141E3CF33E0049719D /* KwPack in Resources */,
 				EA9714131E3CF33E0049719D /* Base.lproj in Resources */,
 				EAA7CC001E43A92700FC0852 /* pianoSound.mp3 in Resources */,
-				EA0C783C1E4F63650028B750 /* circusSong.mp3 in Resources */,
+				EA77079B1E61A94800B5A862 /* circusSong.mp3 in Resources */,
 				EA9714031E3CF32A0049719D /* Framework in Resources */,
 				EA97141A1E3CF33E0049719D /* Assets.xcassets in Resources */,
 				EA9714171E3CF33E0049719D /* Main.storyboard in Resources */,
