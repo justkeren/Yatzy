@@ -82,6 +82,8 @@ class VcMedia: UIViewController {
             
         } else if (eName == "noyatzyforu") {
             self.noYatzy();
+        } else if (eName == "gotbonus") {
+            self.gotBonus();
         } else {
             //this event does not have any action yet
         }
@@ -121,6 +123,21 @@ class VcMedia: UIViewController {
             sleep(4)
         }
     }
+    func gotBonus() {
+        
+        print("got Bonus Magic");
+        if (self.isLoading == true) {
+            print("doing setup")
+            self.playerNameTextField.text = self.playerObj.getName();
+            self.ImageHolder.image = UIImage(named: "bonus")
+            
+        } else {
+            print("executing media")
+    
+            sleep(4)
+        }
+    }
+    
 
 
     

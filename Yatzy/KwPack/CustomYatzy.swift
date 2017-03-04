@@ -21,6 +21,12 @@ extension KwPack {
             return mainColor
         }
         
+        func getNameColor() -> UIColor {
+            let nameColor = KwPack.Colors().getColorFromHex("4C4C4C")
+            
+            return nameColor
+        }
+
         func getButtonColor() -> UIColor {
             let buttonColor = KwPack.Colors().getColorFromHex("e8eaf6")
             

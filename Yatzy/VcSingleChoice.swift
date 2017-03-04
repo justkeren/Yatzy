@@ -28,23 +28,35 @@ class VcSingleChoice: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     func setText () {
+        let playerName      = self.playerObj.getName() + ", ";
         let lastButton      = self.playerObj.getLastButton();
         let rowId           = KwPack.TagConvert().getRowIdFromButton(lastButton);
         var text            = ""
         
         if (rowId == 13) {
-            text = "Did you get the Small Straight?"
+            text = " did you get the Small Straight?"
             
         } else if (rowId == 14) {
-            text = "Did you get the Large Straight?"
+            text = " did you get the Large Straight?"
             
         } else if (rowId == 16) {
-            text = "Did you get Yatzy?"
+            text = " did you get Yatzy?"
         }
         
-        self.TextDescription.text = text
+        //object that holds the text content
+        let textObj         = NSMutableAttributedString(string:text)
+        let mainColor       = KwPack.CustomYatzy().getNameColor()
         
+        
+        let changeObj = [NSFontAttributeName : UIFont.boldSystemFont(ofSize: 20), NSForegroundColorAttributeName : mainColor];
+        let playerNameObj = NSMutableAttributedString(string:playerName, attributes: changeObj)
+        
+        playerNameObj.append(textObj)
+        
+        self.TextDescription.attributedText = playerNameObj
+
     }
+    
 
     
     @IBAction func setScore(_ scoreCardButton: UIButton) {

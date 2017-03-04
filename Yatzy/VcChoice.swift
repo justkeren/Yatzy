@@ -50,7 +50,7 @@ class VcChoice: UIViewController {
     }
     
     func setText () {
-        let playerName      = self.playerObj.getName() + ":";
+        let playerName      = self.playerObj.getName() + "'s";
         let lastButton      = self.playerObj.getLastButton();
         let rowId           = KwPack.TagConvert().getRowIdFromButton(lastButton);
         var text            = ""
@@ -66,8 +66,8 @@ class VcChoice: UIViewController {
         }
         //object that holds the text content
         let textObj         = NSMutableAttributedString(string:text)
-        let mainColor       = KwPack.CustomYatzy().getMainColor()
-        let changeObj = [NSFontAttributeName : UIFont.boldSystemFont(ofSize: 24), NSForegroundColorAttributeName : mainColor];
+        let nameColor       = KwPack.CustomYatzy().getNameColor()
+        let changeObj = [NSFontAttributeName : UIFont.boldSystemFont(ofSize: 24), NSForegroundColorAttributeName : nameColor];
         
        
         let playerNameObj = NSMutableAttributedString(string:playerName, attributes: changeObj)

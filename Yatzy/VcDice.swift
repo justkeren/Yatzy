@@ -57,23 +57,36 @@ class VcDice: UIViewController {
     }
     
     func setText () {
+        let playerName      = self.playerObj.getName() + "'s";
         let lastButton      = self.playerObj.getLastButton();
         let rowId           = KwPack.TagConvert().getRowIdFromButton(lastButton);
         var text            = ""
+
         
         if (rowId == 8) {
-            text = "Total Score for your Pair"
+            text = " Score for One Pair"
             
         } else if (rowId == 10) {
-            text = "Total Score for Three of a Kind"
+            text = " Score for Three of a Kind"
             
         } else if (rowId == 11) {
-            text = "Total Score for Four of a Kind"
+            text = " Score for Four of a Kind"
         }
         
-        self.textDescription.text = text
+        //object that holds the text content
+        let textObj         = NSMutableAttributedString(string:text)
+        let mainColor       = KwPack.CustomYatzy().getNameColor()
+        
+        
+        let changeObj = [NSFontAttributeName : UIFont.boldSystemFont(ofSize: 20), NSForegroundColorAttributeName : mainColor];
+        let playerNameObj = NSMutableAttributedString(string:playerName, attributes: changeObj)
+    
+        playerNameObj.append(textObj)
+        
+        self.textDescription.attributedText = playerNameObj
         
     }
+
     
     @IBAction func setScore(_ scoreCardButton: UIButton) {
         

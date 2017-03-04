@@ -122,6 +122,7 @@ extension KwPack {
             let upperTotal  = self.getUpperScore();
             if (upperTotal > 62) {
                 return 50;
+                 self.setNextEvent("gotBonus");
             } else {
                 //no bonus
                 return 0;
