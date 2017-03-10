@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA2A970D1E730C9C00F5345E /* circus_long.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA2A970C1E730C9C00F5345E /* circus_long.mp3 */; };
+		EA2A970F1E730F2700F5345E /* sadSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA2A970E1E730F2700F5345E /* sadSound.mp3 */; };
+		EA2A97111E73139800F5345E /* crowd.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA2A97101E73139800F5345E /* crowd.mp3 */; };
+		EA45041B1E6C1AE70047D045 /* Maria.m4v in Resources */ = {isa = PBXBuildFile; fileRef = EA45041A1E6C1AE70047D045 /* Maria.m4v */; };
 		EA77079B1E61A94800B5A862 /* circusSong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA77079A1E61A94800B5A862 /* circusSong.mp3 */; };
 		EA9714031E3CF32A0049719D /* Framework in Resources */ = {isa = PBXBuildFile; fileRef = EA9714021E3CF32A0049719D /* Framework */; };
 		EA9714131E3CF33E0049719D /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = EA9714041E3CF33E0049719D /* Base.lproj */; };
@@ -35,6 +39,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA2A970C1E730C9C00F5345E /* circus_long.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = circus_long.mp3; sourceTree = "<group>"; };
+		EA2A970E1E730F2700F5345E /* sadSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sadSound.mp3; sourceTree = "<group>"; };
+		EA2A97101E73139800F5345E /* crowd.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = crowd.mp3; sourceTree = "<group>"; };
+		EA45041A1E6C1AE70047D045 /* Maria.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = Maria.m4v; sourceTree = "<group>"; };
 		EA77079A1E61A94800B5A862 /* circusSong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = circusSong.mp3; sourceTree = "<group>"; };
 		EA9714021E3CF32A0049719D /* Framework */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Framework; sourceTree = "<group>"; };
 		EA9714041E3CF33E0049719D /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
@@ -90,7 +98,11 @@
 			isa = PBXGroup;
 			children = (
 				EA77079A1E61A94800B5A862 /* circusSong.mp3 */,
+				EA2A97101E73139800F5345E /* crowd.mp3 */,
+				EA2A970C1E730C9C00F5345E /* circus_long.mp3 */,
 				EAA7CBFF1E43A92700FC0852 /* pianoSound.mp3 */,
+				EA2A970E1E730F2700F5345E /* sadSound.mp3 */,
+				EA45041A1E6C1AE70047D045 /* Maria.m4v */,
 				EA9714381E3CF4520049719D /* CustomYatzy.swift */,
 				EA9714391E3CF4520049719D /* PermStore.swift */,
 				EA97143A1E3CF4520049719D /* TagConvert.swift */,
@@ -216,8 +228,12 @@
 				EAA7CC001E43A92700FC0852 /* pianoSound.mp3 in Resources */,
 				EA77079B1E61A94800B5A862 /* circusSong.mp3 in Resources */,
 				EA9714031E3CF32A0049719D /* Framework in Resources */,
+				EA2A97111E73139800F5345E /* crowd.mp3 in Resources */,
 				EA97141A1E3CF33E0049719D /* Assets.xcassets in Resources */,
+				EA45041B1E6C1AE70047D045 /* Maria.m4v in Resources */,
 				EA9714171E3CF33E0049719D /* Main.storyboard in Resources */,
+				EA2A970D1E730C9C00F5345E /* circus_long.mp3 in Resources */,
+				EA2A970F1E730F2700F5345E /* sadSound.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

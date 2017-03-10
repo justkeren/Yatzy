@@ -38,6 +38,17 @@ class VcMedia: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+//    func playVideo (_ filename: String){
+//    
+//        
+//        let videoURL: NSURL = Bundle.main.url(forResource: "Para1_2", withExtension: "m4v")! as NSURL
+//        let videoPlayer = AVPlayer(url: videoURL as URL)
+//        let thePlayer = AVPlayerLayer(player: videoPlayer)
+//        thePlayer.frame = self.view!.bounds
+//        self.view!.layer.addSublayer(thePlayer)
+//        videoPlayer.play()
+//    }
+    
     func playSound(_ filename: String) {
         guard let url = Bundle.main.url(forResource: filename, withExtension: "mp3") else {
             print("url not found")
@@ -81,9 +92,11 @@ class VcMedia: UIViewController {
             self.gotYatzyMagic();
             
         } else if (eName == "noyatzyforu") {
-            self.noYatzy();
-        } else if (eName == "gotbonus") {
-            self.gotBonus();
+            self.didNotGet();
+        } else if (eName.lowercased() == "didnotget") {
+            self.didNotGet();
+        } else if (eName.lowercased() == "gotit"){
+            self.gotIt();
         } else {
             //this event does not have any action yet
         }
@@ -106,38 +119,83 @@ class VcMedia: UIViewController {
             
         } else {
             print("executing media")
-            self.playSound("circusSong")
-            sleep(4)
+            self.playSound("circus_long")
+            sleep(25)
         }
     }
     
-    func noYatzy() {
-        print("doing failed to get yatzy magic");
-        
-        if (self.isLoading == true) {
-            self.playerNameTextField.text = self.playerObj.getName();
-            self.ImageHolder.image = UIImage(named: "noYatzy")
-            
-        } else {
-            self.playSound("noGood")
-            sleep(4)
-        }
-    }
-    func gotBonus() {
-        
-        print("got Bonus Magic");
+//    func gotYatzyMagic() {
+//        
+//        print("yatzy magic");
+//        if (self.isLoading == true) {
+//            print("doing setup")
+//            self.playerNameTextField.text = self.playerObj.getName();
+//            self.ImageHolder.image = UIImage(named: "Yatzy")
+//            
+//        } else {
+//            print("executing media")
+//            self.playVideo("Maria")
+//            sleep(4)
+//        }
+//    }
+
+    
+//    func noYatzy() {
+//        print("doing failed to get yatzy magic");
+//        
+//        if (self.isLoading == true) {
+//            self.playerNameTextField.text = self.playerObj.getName();
+//            self.ImageHolder.image = UIImage(named: "noYatzy")
+//            
+//        } else {
+//            self.playSound("noGood")
+//            sleep(4)
+//        }
+//    }
+   
+    func gotIt (){
+        print("gotIt");
         if (self.isLoading == true) {
             print("doing setup")
             self.playerNameTextField.text = self.playerObj.getName();
-            self.ImageHolder.image = UIImage(named: "bonus")
             
         } else {
             print("executing media")
-    
-            sleep(4)
+            self.playSound("crowd")
+            sleep(8)
         }
+
     }
     
+    func didNotGet(){
+        print("didNotGet");
+        if (self.isLoading == true) {
+            print("doing setup")
+            self.playerNameTextField.text = self.playerObj.getName();
+            
+        } else {
+            print("executing media")
+            self.playSound("sadSound")
+            sleep(4)
+        }
+
+    }
+    
+//    func gotBonus() {
+//        
+//        print("got Bonus Magic");
+//        if (self.isLoading == true) {
+//            print("doing setup")
+//            self.playerNameTextField.text = self.playerObj.getName();
+//            self.ImageHolder.image = UIImage(named: "bonus")
+//            
+//        } else {
+//            print("executing media")
+//    
+//            sleep(4)
+//        }
+//    }
+//    
 
 
     

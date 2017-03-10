@@ -122,7 +122,7 @@ extension KwPack {
             let upperTotal  = self.getUpperScore();
             if (upperTotal > 62) {
                 return 50;
-                 self.setNextEvent("gotBonus");
+                 //self.setNextEvent("gotBonus");
             } else {
                 //no bonus
                 return 0;
@@ -352,8 +352,10 @@ extension KwPack {
                 return "Invalid Score";
             } else if (scoreVal == 1){
                 self.updateScore("down", index, 15, "15");
+                self.setNextEvent("gotIt");
             } else if (scoreVal == 0) {
                 self.updateScore("down", index, 0, "0");
+                self.setNextEvent("didNotGet");
             }
             
             return "";
@@ -368,8 +370,10 @@ extension KwPack {
                 return "Invalid Score";
             } else if (scoreVal == 1){
                 self.updateScore("down", index, 20, "20");
+                self.setNextEvent("gotIt");
             } else if (scoreVal == 0) {
                 self.updateScore("down", index, 0, "0");
+                self.setNextEvent("didNotGet");
             }
             
             return "";
